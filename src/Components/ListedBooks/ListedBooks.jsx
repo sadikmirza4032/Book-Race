@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router";
 import { getStoreReadList } from "../../Utiliity/addToDb";
 import Book from "../Book/Book";
-
+import { Helmet } from "react-helmet-async";
 
 const ListedBooks = () => {
   const [readList, setReadList] = useState([]);
@@ -29,7 +29,9 @@ const ListedBooks = () => {
    }
     return (
         <div className="mx-auto  max-w-4xl">
-         
+         <Helmet>
+            <title>Listed book | Book Race</title>
+          </Helmet>
             <h2 className="text-5xl text-center bg-cyan-500">BOOKS</h2>
              <div className="dropdown dropdown-bottom dropdown-end my-7 ml-90 bg-blue-700">
              <div tabIndex={0} role="button" className="btn m-1">{sort ? `Sort By ${sort}`:'Sort By'}</div>

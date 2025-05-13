@@ -2,6 +2,7 @@ import { useLoaderData, useParams } from "react-router";
 import { addStoredToWhiteList, addToStoreReadList } from "../../Utiliity/addToDb";
 
 
+
 const BookDetails = () => {
     const {bookId} = useParams();
 
